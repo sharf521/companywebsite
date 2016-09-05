@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>管理中心</title>
+<link rel="stylesheet" type="text/css" href="{$tpldir}/style.css">
+<script language="javascript" src="/include/js/jquery.js"></script>
+<script language="javascript" src="/include/js/riqi.js"></script>
+
+</head>
+
+<body>
+
+<div class="header">
+<div class="logobox"><img src="{$_G.session.a_citylogo}" /></div>
+<div class="houtai">后台管理系统</div>
+<div class="headtitle">
+	<label id="labelTime">
+		时间
+	</label>
+	<script type="text/javascript">ShowDateTime();</script>&nbsp;&nbsp;
+	
+管理员：{$_G.session.a_username}   <a href="{$_G.admin_url}&q=logout">退出</a></div></div>
+<div class="container">
+	<div class="left">
+    	<ul>
+		
+			<li ><div class="user"><a href="{$_G.admin_url}&q=module/user">用户管理</a></div></li>
+			<li><div class="tixian"><a href="{$_G.admin_url}&q=module/moneylog/txsq">提现申请</a></div></li>
+			<li><div class="zhifucss"><a href="{$_G.admin_url}&q=module/order">在线支付流水</a></div></li>
+            <li><div class="userw"><a href="{$_G.admin_url}&q=module/userlog/user_log">用户资金流水</a></div></li>
+			<li><div class="wzglcss"><a href="{$_G.admin_url}&q=module/article">文章管理</a></div></li>
+			<li><div class="xitcs"><a href="{$_G.admin_url}&q=module/psite">网站管理</a></div></li>
+			<li><div class="linkljcss"><a href="{$_G.admin_url}&q=module/link">友情链接</a></div></li>
+			
+			
+	{if $_G.session.a_privs==1 }
+
+			<li><div class="tixian"><a href="{$_G.admin_url}&q=module/city">站点管理</a></div></li>
+			<li><div class="wzcss"><a href="{$_G.admin_url}&q=module/category&typeid=1">文章分类</a></div></li>
+			<!--<li><div class="spflcss"><a href="{$_G.admin_url}&q=module/category&typeid=2">商品分类</a></div></li>-->
+			<li><div class="wzgl"><a href="{$_G.admin_url}&q=module/psite/canshu">系统参数</a></div></li>
+			<li><div class="pass"><a href="{$_G.admin_url}&q=module/user/userpwd">修改密码</a></div></li>
+			<li><div class="ldglcss"><a href="{$_G.admin_url}&q=module/linkpage">联动管理</a></div></li>
+			<li><div class="ggglcss"><a href="{$_G.admin_url}&q=module/advert">广告管理</a></div></li>
+			<li><div class="clearhc"><a href="{$_G.admin_url}&q=module/psite/clearcache">清除缓存</a></div></li>
+	{/if}
+            
+            <li><div class="exit"><a href="{$_G.admin_url}&q=logout">安全退出</a></div></li>
+        </ul>
+    </div>
+    <div class="main">
+		{include file="$module_tpl" template_dir="$template_dir"}
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+<!--<link href='/include/flexigrid/css/flexigrid.css' type='text/css' rel='stylesheet' />
+<script language="javascript">
+{literal}
+	//!window.jQuery && document.write("<script src=\"/include/js/jquery.js\">"+"</scr"+"ipt>");
+	document.write("<script src=\"/include/flexigrid/js/flexigrid.js\">"+"</scr"+"ipt>");	
+	window.onload=function()
+	{		
+		$('.flexme').flexigrid({ height: 'auto'});
+	}
+{/literal}
+</script>-->
+
+
+
+</body>
+</html>

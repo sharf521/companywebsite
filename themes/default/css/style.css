@@ -1,0 +1,210 @@
+*{ margin:0; padding:0}
+img{ border:0}
+a{ text-decoration:none; color:#666}
+ul li{ list-style:none}
+body{ background:#ededed}
+/*首页*/
+
+/*头部*/
+.header{ width:100%; background:#fff; height:100px;}
+.headbox,.menu{ width:1000px; margin:0 auto; font-size:14px; font-weight:bold}
+.logopic{ height:70px; margin-top:15px; float:left; margin-left:15px; display:inline}
+.logopic img{ height:68px; float:left}
+.logopic h3{ font-size:14px; float:left; margin-left:8px; display:inline; padding-top:50px; color:#630}
+
+.phonebox{ float:right;margin-top:30px;}
+.phonebox img{ float:left; margin-right:8px; display:inline}
+.phonebox span{ float:left; color:#999}
+
+
+.p_info{ float:left; font-size:14px; color:#666; margin-right:20px; display:inline; line-height:45px;}
+.p_curpage{ font-size:14px; font-weight:bold; float:left; color:#cc0000; margin-right:8px; line-height:45px; margin-left:3px; display:inline}
+
+
+/*菜单*/
+.menubox{ width:100%; height:43px; background:url(../img/mbg.jpg) repeat-x}
+.menu{ color:#fff}
+.menu li{ width:123px; height:43px; border-right:1px solid #6f3713; line-height:43px; float:left; text-align:center}
+.menu li a{ color:#fff}
+.menu li a.hot{ color:#ffff00}
+
+/*大层*/
+.container{ width:1000px; margin:0 auto}
+
+/*banner层*/
+.bannerbox{ width:977px; position: relative; height:280px; float:left; background:#630; padding:12px; margin-top:10px;}
+
+/*公司简介+最新公告*/
+.aboutbox{ width:1000px; height:230px; float:left; margin-top:10px;}
+/*公告*/
+.gonggao{ width:228px; height:230px; background:#fff; border:1px solid #AB9B8F; float:left}
+.gonggao dt{ float:left; font-size:14px; font-weight:bold; color:#630; background:url(../img/gg.jpg) no-repeat left; padding-left:25px; margin-left:15px; width:75%;  display:inline; height:20px; line-height:20px; margin-top:8px;}
+.gonggao dt span{ float:left}
+.gonggao dt a{ float:right; font-size:12px; font-weight:normal; color:#630}
+.gonggao dd{ float:left; margin:10px 10px 10px 18px; display:inline; font-size:12px; color:#666; line-height:23px;}
+.gonggao dd a{ color:#666}
+
+/*公司介绍*/
+.gsjs{ width:758px; height:230px; overflow:hidden; float:left; border:1px solid #AB9B8F; background:#fff; margin-left:10px; display:inline}
+.gsjs dt{float:left; font-size:14px; font-weight:bold; color:#630; background:url(../img/jj.jpg) no-repeat left; padding-left:25px; margin-left:15px; width:90%; display:inline; height:20px; line-height:20px; margin-top:8px;}
+.gsjs dt span{ float:left}
+
+.gsjs dt a{ float:right; font-size:12px; font-weight:normal; color:#630}
+.gsjs dd{ margin:10px 10px 10px 18px; display:inline; font-size:12px; color:#666; line-height:23px; float:left; width:718px;}
+.gsjspan{ float:left; width:550px; overflow:hidden}
+.gsjs dd  img{ float:left; width:150px; height:191px; margin-left:15px; display:inline }
+
+
+
+
+/*产品展示大层*/
+.cpallbox{ width:1000px; margin-top:13px; float:left}
+/*左侧*/
+.cpleftbox{ width:230px; float:left; }
+.newsbox{background:#fff; border:1px solid #ab9b8f; float:left; width:228px; height:240px; }
+.newsboxdt{float:left; font-size:14px; font-weight:bold; color:#630; background:url(../img/news.jpg) no-repeat left; padding-left:25px; margin-left:15px; width:60%; display:inline; height:20px; line-height:20px; margin-top:8px;}
+.newsbdd{ margin:10px 10px 10px 18px; display:inline; font-size:12px; color:#666;  float:left; width:190px;}
+.newsbdd li{  float:left; width:190px;height:28px; line-height:28px;color:#666;  overflow:hidden; border-bottom:1px dashed #ccc  }
+.newsbdd li a { height:28px; width:190px; line-height:28px; padding-left:10px; background:url(../img/fk.jpg) no-repeat left top; color:#666; }
+.newsbdd li a:hover{ color:#630}
+
+
+
+
+
+.cptypebox{ background:#fff; border:1px solid #ab9b8f; float:left; width:228px; margin-top:12px; margin-bottom:10px;}
+.cptypebox dt{float:left; font-size:14px; font-weight:bold; color:#630; background:url(../img/fl.jpg) no-repeat left; padding-left:25px; margin-left:15px; width:60%; display:inline; height:20px; line-height:20px; margin-top:8px;}
+.cptypebox dd{ margin:10px 10px 10px 18px;display:inline; font-size:12px; color:#333; float:left}
+.cptypebox dd a{ width:190px; display:block; height:28px; line-height:28px; overflow:hidden; background:url(../img/fk.jpg) no-repeat  left ; padding-left:10px;  color:#333}
+
+.cptypebox dd a:hover{ color:#630}
+
+/*子类*/
+.zilei{ font-size:12px; color:#777;}
+.zilei span{ font-size:12px; color:#777}
+.zilei span a{ font-size:12px; color:#888; background:none; padding-left:5px;}
+
+
+
+/*右侧*/
+.cprightbox{width:758px; height:500px; float:left; border:1px solid #AB9B8F; background:#fff; margin-left:10px; display:inline}
+.cpdt{float:left; font-size:14px; font-weight:bold; color:#630; background:url(../img/zs.jpg) no-repeat left; padding-left:25px; margin-left:15px; width:700px; height:20px; line-height:20px; margin-top:8px;}
+.cpulbox{ margin-left:15px; display:inline; margin-top:10px; float:left; font-size:12px; color:#666; width:730px;}
+.cpulbox li{ width:171px; float:left; margin-right:10px; display:inline; background:url(../img/cpk.jpg) no-repeat top; margin-bottom:15px;}
+.cpulbox li img{ width:150px; height:150px; float:left; margin:11px}
+.cpulbox li span{ font-size:12px; height:35px; overflow:hidden; float:left; width:160px; margin-left:5px; margin-right:5px; display:inline; text-align:center;  line-height:1.5;color:#666}
+
+.cpulbox li a{ color:#666}
+
+/*底部*/
+
+.footer{ width:100%; background:#fff; border-top:3px solid #630; padding-bottom:20px; margin-top:50px}
+.link{  padding:10px; font-size:12px; color:#999999; width:1000px; margin:0 auto; border-bottom:1px solid  #ccc}
+.link a{ color:#999; line-height:20px; display:inlie-block;}
+.link a:hover{ color:#630}
+.link a img{ height:40px;}
+/*版权*/
+.banbox{ width:520px;  margin:0 auto; font-size:12px; color:#666; padding-top:15px; text-align:center; line-height:20px}
+
+
+
+
+
+
+/*--------------公司简介--------*/
+
+/*banner层*/
+.aboutpic{ width:980px; height:213px; float:left; background:#630; padding:10px; margin-top:10px;}
+
+/*内容*/
+.gsjjbox{ width:1000px; margin-top:10px; float:left}
+
+.gsleftbox{ width:227px; float:left}
+
+/*标题*/
+.gstitle{ width:217px; padding-left:10px; height:38px; background:#630; float:left; line-height:38px; color:#fff; font-size:14px; font-weight:bold}
+/*列表项*/
+.sn{ width:227px; float:left; background:#fff; overflow:hidden}
+.sn li{ height:38px; float:left; font-size:14px; margin-top:1px; }
+.sn li a{width:227px; height:38px; text-align:center; background:#fff;  float:left; line-height:38px; color:#630; position:relative;}
+.sn li a:hover{ background:#f5f5f5}
+.sn li a.hot{background:#f5f5f5}
+
+.bottompic{ width:227px; height:73px; float:left; margin-top:10px}
+
+/*右边*/
+.gsrightbox{ width:755px; float:left; margin-left:12px; display:inline; margin-top:5px;}
+.daohangbox{ font-size:14px; color:#666; width:100%;}
+.gjcontent{ width:755px; padding-bottom:40px; background:#fff; float:left; border:1px solid #ccc; margin-top:15px;}
+.dhtitle{ width:700px; float:left; font-size:16px; font-weight:bold; color:#630; padding:15px 0px 0px 15px}
+.gsjxcon{ width:720px; padding:10px 10px 10px 10px; float:left; color:#666; line-height:25px; font-size:14px;}
+.gsjxcon p{float:left; margin:0px 10px 0px 10px; display:inline; width:690px;}
+.gsjxcon img{ width:690px;}
+
+
+/*------------------新闻中心-----------*/
+
+.gsjxcon li{ width:690px; height:30px; line-height:30px; background:url(../img/lipic.jpg) no-repeat left; padding-left:18px; float:left; border-bottom:1px dashed #ccc; color:#666; margin:8px 0px 0px 8px; font-size:12px;}
+.gsjxcon li a{ width:550px; height:30px; line-height:30px; color:#666; float:left}
+.gsjxcon li span{ float:right; font-size:12px;}
+
+/*上一篇*/
+.theup{font-size:14px; width:70%; color:#666; float:left; padding-left:20px; line-height:25px;}
+.theup a{ color:#666;}
+.theup a:hover{ color:#663300}
+
+/*--------------人才招聘------------*/
+.joinbox{ width:200px; padding-left:20px; padding-top:10px; float:left; font-size:14px; color:#666; line-height:30px;}
+.joinpic{ width:415px; height:157px; float:right; background:url(../img/zppic.jpg)}
+
+.zhaopicbox{ width:670px; float:left; padding-left:20px; }
+
+
+
+
+/*产品展示*/
+/*页码*/
+.pagecount{ float:right; padding-right:20px; height:28px; text-align:center; margin-top:20px;}
+.pagecount a{ padding:6px; float:left; font-size:12px; color:#666; margin:0px 8px  0px 8px; display:block; background:#f5f5f5; border:1px solid #ccc}
+
+.pagecount a:hover{ color:#630}
+
+
+
+
+
+<!--轮播-->
+.bigbanner{ width: 977px; height: 280px; overflow:hidden; position:relative ; z-index:1}
+.number { bottom: 25px;left: 800px;position: absolute; z-index: 1111; }
+.number li { float:left;  width: 19px; height: 19px; text-align: center; line-height: 19px; font-weight: bold; font-size:14px; color: #cc3300; border:1px solid #cc0000; background:#fff; margin-left: 6px; cursor: pointer; z-index:1111}
+.number .nonce { background:#fff; }
+.number .initial { background:#fff; border:1px solid #999; }
+.bigbanner a { width: 977px; height: 280px; float:left;  position: relative; z-index:2}
+.bigbanner img{ width:977px; height:280px; }
+
+<!--客服-->
+/*客服*/
+.KeFuDiv{
+	position: absolute;
+	height:160px;
+	width:118px;
+}
+.KeFuList{
+	background:url(../img/mid001.gif);
+	width:118px;
+}
+.KeFuTitle{
+	background:url(../img/list_001.gif);
+	margin-left:9px;
+	font-size:9pt;
+	width:101px;
+	height:20px;
+	text-align:center;
+	line-height:20px;
+}
+.KeFuItem{
+	text-align:center;
+	margin-top:8px;
+	font-size:9pt;
+	width:120px;
+}

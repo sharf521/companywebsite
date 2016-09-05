@@ -1,0 +1,50 @@
+{include file='header.html'}
+		
+		
+		<div class="container">
+			<div class="banpic">
+			{if $_G.advt.image}
+			<a href="{$_G.advt.link}" target="_blank"><img src="{$_G.advt.image}" /></a>
+			{else}
+			<a href="#"><img src="/themes/shopcom/img/ban.jpg" /></a>
+			{/if}
+			</div>
+			<div class="bigbox">
+				<div class="sy_leftbox">
+				
+					<div class="about_left">
+						<div class="about_bg"></div>
+						<div class="about_title"><b>证书荣誉</b></div>
+						<a href="/rongyu/index.html" {if $_G.categoryid==9}class="hot"{/if}>证书荣誉</a>
+						
+						
+						<div class="about_botpic"></div>
+							
+					</div>	
+				
+				
+				</div>
+				
+				
+				<div class="sy_rightbox">
+				
+					<div class="gscpbox">
+						<div class="gs_title"><b>证书荣誉</b><span>您现在的位置：<a href="/">首页</a>-证书荣誉</span></div>
+						<div class="about_text">
+						
+					{$_G.solu.content}
+						
+						</div>
+						
+					</div>	
+				
+				
+				
+				</div>
+			
+			</div>
+			
+			
+		</div>	
+			
+{include file='footer.html'}

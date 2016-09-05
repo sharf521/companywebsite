@@ -1,0 +1,60 @@
+{include file='header.html'}
+		
+		
+		<div class="container">
+			<div class="banpic">
+			{if $_G.advt.image}
+			<a href="{$_G.advt.link}" target="_blank"><img src="{$_G.advt.image}" /></a>
+			{else}
+			<a href="#"><img src="/themes/shopcom/img/ban.jpg" /></a>
+			{/if}
+			</div>
+			<div class="bigbox">
+				<div class="sy_leftbox">
+					<div class="about_left">
+						<div class="about_bg"></div>
+						<div class="about_title"><b>公司简介</b></div>
+						
+						<a href="/about/index.html" {if $_G.categoryid==1}class="hot"{/if}>公司简介</a>
+						<a href="/zizhi/index.html" {if $_G.categoryid==2}class="hot"{/if}>公司资质</a>
+						<a href="/licheng/index.html" {if $_G.categoryid==3}class="hot"{/if}>公司历程</a>
+				
+						
+						<div class="about_botpic"></div>
+							
+					</div>
+					
+		
+				
+				</div>
+				
+				
+				
+				<div class="sy_rightbox">
+					<div class="gscpbox">
+						<div class="gs_title"><b>公司资质</b><span>您现在的位置：<a href="/">首页</a>-公司资质</span></div>
+						<div class="about_text">
+						
+					{$_G.solu.content}
+					
+					
+				
+						
+						
+						</div>
+						
+						
+					</div>
+					
+				
+				</div>
+			
+			
+			
+			
+			
+			</div>
+			
+		</div>
+		
+{include file='footer.html'}

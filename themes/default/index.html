@@ -1,0 +1,179 @@
+{include file='head.html'}
+
+		<div class="container"><!--轮播广告-->
+			<div class="bannerbox"><!--<a href="#"><img src="themes/default/img/bpic.jpg" /></a>-->
+	
+		<div class="bigbanner">
+			<ul class="number">
+					<!-- {foreach from=$_G.advt item=image name=fe_image} -->
+					<!-- {if $image.bian==1} -->
+					<li class="nonce" target_src="{$image.image}" target_link="{$image.link}">1</li>
+					<!-- {else} -->
+					<li  class="initial" target_src="{$image.image}" target_link="{$image.link}">{$image.bian}</li>
+					<!-- {/if} -->
+					<!-- {/foreach} -->			
+			</ul>
+			<ul style="width:977px; height:280px; position:absolute; ">
+				{if $_G.img1}
+				<li style="float:left">
+				<a  href="{$_G.link1}" target="_blank">
+				<img src="{$_G.img1}" width="977" height="280" ></a></li>
+				{else}
+				<li style="float:left">
+				<a href="#">
+				<img src="themes/default/img/bpic.jpg" width="977" height="280" ></a></li>
+				{/if}
+				
+			</ul>	
+		</div>
+
+     
+			 
+		</div>
+			<div class="aboutbox">
+				<dl class="gonggao">
+					<dt><span>最新公告</span><a href="/notice/index.html">更多>></a></dt>
+					<dd>{$_G.news.content}
+					</dd>
+				
+				
+				</dl>
+				
+				
+				<dl class="gsjs">
+					<dt><span>公司简介</span><a href="/about/index.html">更多>></a></dt>
+					<dd>
+						<div class="gsjspan">
+							{$_G.news1.content}
+						</div>
+							<img src="themes/default/img/jjpic.jpg" />			
+						
+					</dd>
+				
+				
+				
+				</dl>
+			
+			
+			</div>
+		
+		
+			
+			
+			
+			
+			
+			
+			<div class="cpallbox">
+			  <div class="cpleftbox">
+					<div class="newsbox">
+						<div class="newsboxdt">新闻中心</div>					
+						<ul class="newsbdd">
+						{foreach from=$_G.news2 item=var}
+								<li><a href="/news/{$var.id}.html" title="{$var.title}">{$var.title}</a></li>
+						{/foreach}	
+						</ul>
+					
+					
+					
+					</div>
+					
+					
+					
+					
+					<dl class="cptypebox">
+						<dt>产品分类</dt>
+						<dd>
+							
+			 <!--{foreach from=$_G.fenlei item=category}-->
+               <ul> <li><a href="/chanpin/{$category.cate_id}.html">{$category.cate_name}</a></li></ul>
+                    <!--{if $category.children}-->
+                
+                        <div class="zilei">
+                                <!--{foreach from=$category.children item=second_children}-->
+                                    <span><a href="/chanpin/{$second_children.cate_id}.html">&nbsp;--{$second_children.cate_name}</a></span>
+                               <!--{/foreach}-->  
+						</div>		    
+					<!--{/if}-->					
+				<!--{/foreach}-->
+						
+							
+						</dd>
+					
+					
+					
+					
+					
+					</dl>
+				
+				
+				
+				</div>
+				
+				
+				<div class="cprightbox">
+					<div class="cpdt">产品展示</div>
+					<ul class="cpulbox">
+
+						{foreach from=$_G.goods item=var}
+						<li><a href="{$_G.img_path}goods/{$var.goods_id}" target="_blank"><img src="{$var.default_image}" /></a><span><a href="{$_G.img_path}goods/{$var.goods_id}" target="_blank" title="{$var.goods_name}">{$var.goods_name1}</a></span></li>
+						{/foreach}	
+
+					</ul>
+				
+				
+				
+				
+				</div>
+			
+	
+			</div>
+		
+	
+		
+		</div>
+		
+
+{literal}			
+<script type="text/javascript">
+var tId;
+startScroll();
+$(function(){
+    $('.number li').each(function(){
+        $(this).click(function(){
+            slideHere($(this));
+        });
+    });
+});
+function startScroll(){
+    tId = setInterval(function(){
+        var nextImg = $('.nonce').next('.initial');
+        if(nextImg.length==0){
+            nextImg = $($('.number li')[0]);
+        }
+        slideHere($(nextImg));
+    }, 3000);
+}
+function stopScroll(){
+    clearInterval(tId);
+}
+function slideHere(imgObj){
+    $('.number li').removeClass('nonce');
+    $('.number li').addClass('initial');
+    imgObj.removeClass('initial');
+    imgObj.addClass('nonce');
+    if($('.bigbanner img').length)
+    {
+        $('.bigbanner img')
+            .attr('src', imgObj.attr('target_src'))
+            .css('display', 'none')
+            .fadeIn('normal')
+            .parent().attr('href', imgObj.attr('target_link'))
+            .attr('target', '_blank');
+   }
+}
+</script>			
+{/literal}		
+		
+		
+		{include file='foot.html'}

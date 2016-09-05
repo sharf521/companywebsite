@@ -1,0 +1,67 @@
+{include file='header.html'}
+		
+		
+		<div class="container">
+			<div class="banpic">
+			{if $_G.advt.image}
+			<a href="{$_G.advt.link}" target="_blank"><img src="{$_G.advt.image}" /></a>
+			{else}
+			<a href="#"><img src="/themes/shopcom/img/ban.jpg" /></a>
+			{/if}
+			</div>
+			<div class="bigbox">
+				<div class="sy_leftbox">				
+					
+					<div class="sy_cpjs">
+					
+						<div class="about_bg"></div>
+						<div class="sy_cpjsbg"><b>产品分类</b></div>
+						
+						<!--{foreach from=$_G.fenlei item=category}-->					
+						<div class="sy_cpjsli"><a href="/chanpin/{$category.cate_id}.html">{$category.cate_name}</a></div>
+						<!--{if $category.children}-->
+						<!--{foreach from=$category.children item=second_children}-->
+						<div class="sy_type"><a href="/chanpin/{$second_children.cate_id}.html">&nbsp;--{$second_children.cate_name}</a></div>
+						<!--{/foreach}-->  
+					 	<!--{/if}-->
+					<!--{/foreach}-->
+
+					
+					
+					
+				
+	
+					</div>			
+				
+				</div>
+				
+				
+				<div class="sy_rightbox">
+					<div class="gscpbox">
+						<div class="gs_title"><b>{if $_G.row.cate_name}{$_G.row.cate_name}{else}所有商品{/if}</b><span>您现在的位置：<a href="/">首页</a>-<a href="/chanpin/index.html">公司产品</a></span></div>
+						<div class="about_text">
+						
+						
+						<ul class="cpulbox">
+						{foreach from=$_G.goods item=var}
+						<li><a href="{$_G.img_path}goods/{$var.goods_id}" target="_blank"><img src="{$var.default_image}" /></a><span><a href="{$_G.img_path}goods/{$var.goods_id}" target="_blank" title="{$var.goods_name}">{$var.goods_name1}</a></span></li>
+						{/foreach}	
+				         </ul>
+						<div class="pagecount">
+							{$_G.page}
+						</div>
+			
+						</div>
+						
+					</div>
+					
+				
+				
+				</div>
+			
+			</div>
+			
+		</div>
+		
+		
+{include file='footer.html'}

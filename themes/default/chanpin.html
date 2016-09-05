@@ -1,0 +1,79 @@
+{include file='head.html'}
+		
+			<div class="container">
+					
+			
+			<div class="aboutpic">{if $_G.advt.image}
+			<a href="{$_G.advt.link}" target="_blank"><img src="{$_G.advt.image}" /></a>
+			{else}
+			<a href="#"><img src="/themes/default/img/aboutba.jpg" /></a>
+			{/if}</div>
+			<div class="gsjjbox">
+				<div class="gsleftbox">
+					<div class="gstitle">产品分类</div>
+					 <!--{foreach from=$_G.fenlei item=category}-->
+               <ul  class="sn"> 
+			   <li><a style="text-align:left;border:none; width:215px; padding-left:12px; margin-top:0px;"  href="/chanpin/{$category.cate_id}.html">{$category.cate_name}</a></li>
+			    <!--{if $category.children}-->                
+                                <!--{foreach from=$category.children item=second_children}-->
+               <div style="float:left; font-size:12px; border-bottom:1px dashed #ccc; border:none;  padding-left:10px;">
+			   <a style="text-align:left;width:180px;line-height:25px; background:none; color:#666; float:left " href="/chanpin/{$second_children.cate_id}.html">--{$second_children.cate_name}</a>
+			   </div>
+                               <!--{/foreach}-->  
+						   		    
+					<!--{/if}-->
+								
+				<!--{/foreach}-->
+				</ul>
+				
+					<div class="bottompic"><a href="/zhaopin/index.html"><img src="/themes/default/img/cp.jpg" /></a></div>
+					
+					<div class="bottompic" ><a href="/contact/index.html"><img src="/themes/default/img/lx.jpg" /></a></div>
+					
+								
+				
+				</div>
+				
+				
+				
+				<div class="gsrightbox">
+				
+					<div class="daohangbox">当前位置：<a href="/">首页</a>--<a href="/chanpin/index.html">公司产品</a>--{if $_G.row.cate_name}{$_G.row.cate_name}{else}所有商品{/if}</div>
+					<div class="gjcontent">
+						
+					
+						<div class="dhtitle"></div>
+						<ul class="cpulbox">
+						{foreach from=$_G.goods item=var}
+						<li><a href="{$_G.img_path}goods/{$var.goods_id}" target="_blank"><img src="{$var.default_image}" /></a><span><a href="{$_G.img_path}goods/{$var.goods_id}" target="_blank" title="{$var.goods_name}">{$var.goods_name1}</a></span>
+
+						</li>
+						{/foreach}
+						</ul>
+						
+						<div class="pagecount">
+							{$_G.page}
+						</div>
+					
+					
+						
+				
+				
+				
+				</div>
+			
+			
+			
+			
+			
+			
+			</div>
+			
+		
+		</div>	
+	
+	
+			</div>
+			
+			
+			{include file='foot.html'}

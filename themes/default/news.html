@@ -1,0 +1,82 @@
+{include file='head.html'}
+		
+		
+			<div class="container">
+			
+			
+			
+			<div class="aboutpic">{if $_G.advt.image}
+			<a href="{$_G.advt.link}" target="_blank"><img src="{$_G.advt.image}" /></a>
+			{else}
+			<a href="#"><img src="/themes/default/img/aboutba.jpg" /></a>
+			{/if}</div>
+			<div class="gsjjbox">
+				<div class="gsleftbox">
+					<div class="gstitle">新闻中心</div>
+					<ul class="sn">
+						<li><a href="/notice/index.html">最新公告</a></li>	
+						<li><a href="/news/index.html" class="hot">公司新闻</a></li>				
+					
+					</ul>
+					<div class="bottompic"><a href="/zhaopin/index.html"><img src="/themes/default/img/cp.jpg" /></a></div>
+					
+					<div class="bottompic"><a href="/contact/index.html"><img src="/themes/default/img/lx.jpg" /></a></div>
+					
+								
+				
+				</div>
+				
+				
+				
+				<div class="gsrightbox">
+				
+					<div class="daohangbox">当前位置：<a href="/">首页</a>--新闻中心</div>
+					<div class="gjcontent">
+					{if $_G.list}
+						<div class="dhtitle">新闻中心</div>
+						<ul class="gsjxcon">
+							{foreach from=$_G.list item=var}
+							<li><a href="/news/{$var.id}.html">{$var.title}</a><span>{$var.createdate}</span></li>
+							{/foreach}
+						</ul>				
+						<div class="pagecount">
+						
+							{$_G.page}
+
+						</div>		
+					{else}
+					<div class="dhtitle">{$_G.solu_con.title}</div>
+						<div class="gsjxcon">
+						
+							<p>  {$_G.solu_con.content}</p>
+							
+										
+						
+						</div>		
+			
+						<br />
+						<div class="theup">上一篇：{if $_G.precon}<a href="/news/{$_G.precon.id}.html">{$_G.precon.title}</a>{else}没有符合条件的记录{/if}</div>
+					
+						<div  class="theup">下一篇：{if $_G.nextcon}<a href="/news/{$_G.nextcon.id}.html">{$_G.nextcon.title}</a>{else}没有符合条件的记录{/if}</div>
+					{/if}
+						
+					
+					
+					
+					</div>
+			
+				
+				
+				</div>
+			
+	
+			
+			</div>
+			
+			
+			
+			
+			</div>
+			
+			
+		{include file='foot.html'}

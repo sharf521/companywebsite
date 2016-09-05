@@ -1,0 +1,80 @@
+{include file='header.html'}
+		
+		
+		<div class="container">
+			<div class="banpic">
+			{if $_G.advt.image}
+			<a href="{$_G.advt.link}" target="_blank"><img src="{$_G.advt.image}" /></a>
+			{else}
+			<a href="#"><img src="/themes/shopcom/img/ban.jpg" /></a>
+			{/if}
+			</div>
+			<div class="bigbox">
+				<div class="sy_leftbox">				
+					
+					<div class="sy_cpjs">
+					
+						<div class="about_bg"></div>
+						<div class="sy_cpjsbg"><b>产品分类</b></div>
+						
+						<!--{foreach from=$_G.fenlei item=category}-->					
+						<div class="sy_cpjsli"><a href="/chanpin/{$category.cate_id}.html">{$category.cate_name}</a></div>
+						<!--{if $category.children}-->
+						<!--{foreach from=$category.children item=second_children}-->
+						<div class="sy_type"><a href="/chanpin/{$second_children.cate_id}.html">&nbsp;--{$second_children.cate_name}</a></div>
+						<!--{/foreach}-->  
+					 	<!--{/if}-->
+					<!--{/foreach}-->
+
+					
+					
+					
+				
+	
+					</div>			
+				
+				</div>
+				
+				
+				<div class="sy_rightbox">
+					<div class="gscpbox">
+						<div class="gs_title"><b>企业风采</b><span>您现在的位置：<a href="/">首页</a>-<a href="/fengcai/index.html">企业风采</a></span></div>
+						<div class="about_text">
+						{if $_G.list}
+							<ul class="cpulbox">
+							{foreach from=$_G.list item=var}
+								<li>
+							<a href="/fengcai/{$var.id}.html" title="{$var.title}"><img src="{$var.image}" /><span>{$var.title1}</span></a>
+								</li>
+							{/foreach}
+							</ul>	
+							<div class="pagecount">
+								{$_G.page}
+							</div>
+						{else}
+						
+						<div class="dhtitle">{$_G.solu_con.title}</div>
+						<div class="gsjxcon">
+							<p><img src="{$_G.solu_con.image}" /></p>
+							<p>  {$_G.solu_con.content}</p>
+						</div>
+						<br />
+						<div class="theup">上一篇：{if $_G.precon}<a href="/news/{$_G.precon.id}.html">{$_G.precon.title}</a>{else}没有符合条件的记录{/if}</div>
+					
+						<div class="theup">下一篇：{if $_G.nextcon}<a href="/news/{$_G.nextcon.id}.html">{$_G.nextcon.title}</a>{else}没有符合条件的记录{/if}</div>
+					
+						{/if}
+						</div>
+						
+					</div>
+					
+				
+				
+				</div>
+			
+			</div>
+			
+		</div>
+		
+		
+{include file='footer.html'}

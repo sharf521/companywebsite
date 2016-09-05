@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;" />
+<title>
+{if $_G.lei}{if $_G.solu_con}{$_G.solu_con.title}--{/if}{$_G.lei.name}--{/if}{$_G.ucity.name}</title>
+<link href="/themes/shopcom/css/style.css" rel="stylesheet" />
+<script type="text/javascript" src="/themes/default/js/jquery.js"></script>
+</head>
+
+<body>
+
+		<div class="header">
+			
+			<div class="headbox">
+				<div class="logopic"><img src="{$_G.ucity.logo}" /><h3>{$_G.ucity.name}</h3></div>
+				<div class="phonebox">
+					<img src="/themes/shopcom/img/phone.jpg" />
+					<span>
+						<b>{$_G.ucity.rexian}</b><br />
+						客服时间:09:00-21:00
+					
+					</span>
+				
+				
+				</div>
+			
+			
+			</div>
+			
+		
+		</div>
+		
+		
+		<div class="menu">
+			
+			<div class="menubox">
+				
+				<a href="/index.php" {if $_G.categoryid==''} class="hot" {/if}>网站首页</a>
+				<a href="/chanpin/index.html" {if $_G.categoryid==11} class="hot" {/if}>公司产品</a>
+				<a href="/about/index.html" {if $_G.categoryid==1 || $_G.categoryid==2 || $_G.categoryid==3} class="hot"{/if}>公司简介</a>
+				<a href="/fengcai/index.html" {if $_G.categoryid==5} class="hot"{/if}>企业风采</a>
+				<a href="/news/index.html" {if $_G.categoryid==6 || $_G.categoryid==8} class="hot"{/if}>新闻中心</a>
+				<a href="/rongyu/index.html" {if $_G.categoryid==9}class="hot"{/if}>证书荣誉</a>
+				<a href="/zhaopin/index.html" {if $_G.categoryid==4}class="hot"{/if}>人才招聘</a>
+				<a href="/contact/index.html" {if $_G.categoryid==7}class="hot"{/if}>联系我们</a>
+			
+			</div>
+				
+	
+		</div>
+		
